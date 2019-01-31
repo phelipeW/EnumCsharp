@@ -1,4 +1,7 @@
 ﻿using System;
+using ConsoleApp1.Entities;
+using ConsoleApp1.Entities.Enums;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +13,27 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("teste sourcetree!!");
+            Order order = new Order
+            {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
+
+            Console.WriteLine(order);
+
+            string txt = OrderStatus.PendingPayment.ToString();
+            
+            Console.Read();
         }
     }
 }
+
+
+            
+        
+   
+
+        
+    
+
